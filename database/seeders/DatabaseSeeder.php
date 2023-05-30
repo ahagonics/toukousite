@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             GenresTableSeeder::class,
-            MangasSeeder::class
+            MangasSeeder::class,
+            ToukouUsersTableSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 
