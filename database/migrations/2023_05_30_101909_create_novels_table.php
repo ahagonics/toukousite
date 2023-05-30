@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->bigInteger('genreid');
             $table->bigInteger('userid');
+            $table->string('content');
             $table->double('review');
             $table->timestamps();
         });
