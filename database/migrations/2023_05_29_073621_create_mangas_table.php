@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('mangas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('genreid');
-            $table->bigInteger('userid');
+            $table->bigInteger('genre_id');
+            $table->bigInteger('toukou_user_id');
             $table->double('review');
             $table->timestamps();
         });

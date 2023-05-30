@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Toukou;
 use Illuminate\Http\Request;
 
 class ToukouController extends Controller
@@ -12,6 +13,10 @@ class ToukouController extends Controller
     public function index()
     {
         //
+        // $Toukous = Toukou::all();
+        // dd($contacts);compact('Toukous')
+
+        return view('Toukousite.index');
     }
 
     /**
