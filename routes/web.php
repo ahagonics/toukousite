@@ -21,15 +21,12 @@ use App\Models\Novels;
 */
 
 Route::resource('/Toukousite', ToukouController::class)->except(['create']);
+Route::resource('/mangasranking', MangasRankingController::class);
+Route::resource('/novelsranking', NovelsRankingController::class);
+
 
 Route::middleware('auth')->group(function () {
-<<<<<<< HEAD
     Route::get('/Toukou', [ToukouController::class, 'create'])->name('Toukousite.create');
-=======
-    Route::resource('/Toukousite', ToukouController::class);
-    Route::resource('/mangasranking', MangasRankingController::class);
-    Route::resource('/novelsranking', NovelsRankingController::class);
->>>>>>> bc8eb0331dc811f33b2745cb832278f28a32d093
 });
 
 Route::get('/', function () {
