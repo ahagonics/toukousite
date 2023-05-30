@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             GenresTableSeeder::class,
             MangasSeeder::class,
             NovelsSeeder::class,
+            UserSeeder::class,
             ToukouUsersTableSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
