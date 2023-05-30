@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Mangas; //モデルファイル ELoquent ORM phpでdb操作
+use App\Models\Mangas;
 
 class MangasRankingController extends Controller
 {
