@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToukouController;
 use App\Http\Controllers\MangasRankingController;
 use App\Http\Controllers\NovelsRankingController;
+use App\Http\Controllers\MangaController;
+use App\Http\Controllers\NovelController;
 use App\Models\Mangas;
 use App\Models\Novels;
 
@@ -23,6 +25,10 @@ use App\Models\Novels;
 Route::resource('/Toukousite', ToukouController::class)->except(['create']);
 Route::resource('/mangasranking', MangasRankingController::class);
 Route::resource('/novelsranking', NovelsRankingController::class);
+Route::resource('/manga', MangaController::class);
+Route::resource('/novel', NovelController::class);
+  
+
 
 
 Route::middleware('auth')->group(function () {

@@ -2,7 +2,7 @@
 <html lang=“ja”>
 <head>
     <meta charset=“UFT-8”>
-    <title>小説ランキング</title>
+    <title>小説一覧</title>
     <style>
                 nav {
         width: 100%;
@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <h1>小説ランキング</h1>
+    <h1>小説一覧</h1>
     {{-- メニューバー --}}
     <nav>
         <ul>
@@ -40,12 +40,12 @@
           <li><a href="#">ログイン</a></li>
         </ul>
     </nav>
-    @foreach($novelsrank as $novel_rankdata)
+    @foreach($novels as $novel_data)
         <div class="card my-4">
             <div class="row mx-0">
-                {{-- <h3 class="col border-bottom text-center border-dark"> {{}} 位</h3> --}}
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_rankdata->name }}  </h3>
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_rankdata->review }}  </h3>
+                {{-- <h3 class="col border-bottom text-center border-dark"> {{ ? }} 位</h3> --}}
+                <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->created_at }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->name }} </h3>
             </div>
         </div>
     @endforeach
