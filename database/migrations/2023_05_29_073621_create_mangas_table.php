@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigInteger('genre_id');
             $table->bigInteger('toukou_user_id');
             $table->string('content');
-            $table->double('review');
+            $table->double('review')->nullable();
             $table->timestamps();
         });
     }

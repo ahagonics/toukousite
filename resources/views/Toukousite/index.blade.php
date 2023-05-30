@@ -49,18 +49,19 @@
     <h1>投稿サイトへようこそ</h1>
     <nav>
         <ul>
+          <li><a href="#">ホーム</a></li>
           <li><a href="#">漫画</a></li>
           <li><a href="#">小説</a></li>
-          <li><a href="#">投稿</a></li>
-          <li><a href="#">ログイン</a></li>
+          <li><a href="{{ route('Toukousite.create') }}">投稿</a></li>
+          <li><a href="{{ route('login') }}">ログイン</a></li>
         </ul>
     </nav>
 
     <a href="#" class="btn-square-pop">今日投稿の漫画</a>
     <a href="#" class="btn-square-pop">今日投稿の小説</a>
 <br>
-    <a href="#" class="btn-square-pop">漫画ランキング</a>
-    <a href="#" class="btn-square-pop">小説ランキング</a>
+    <a href="{{ route('mangasranking.index') }}" class="btn-square-pop">漫画ランキング</a>
+    <a href="{{ route('novelsranking.index') }}" class="btn-square-pop">小説ランキング</a>
 
 </body>
 </html>
