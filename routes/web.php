@@ -3,6 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToukouController;
+use App\Http\Controllers\MangasRankingController;
+use App\Http\Controllers\NovelsRankingController;
+use App\Models\Mangas;
+use App\Models\Novels;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +22,8 @@ use App\Http\Controllers\ToukouController;
 
 Route::middleware('auth')->group(function () {
     Route::resource('/Toukousite', ToukouController::class);
+    Route::resource('/mangasranking', MangasRankingController::class);
+    Route::resource('/novelsranking', NovelsRankingController::class);
 });
 
 Route::get('/', function () {
