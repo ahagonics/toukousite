@@ -20,7 +20,17 @@ class UserSeeder extends Seeder
                 'name'=>'sails',
                 'email'=>'sails@c.com',
                 'password'=> Hash::make('passwords'),
-            ]
+            ],
+            [
+                'name'=>'Koko',
+                'email'=>'koko@k.com',
+                'password'=> Hash::make('kokochan'),
+            ],
+            [
+                'name'=>'kanri',
+                'email'=>'kanri@g.com',
+                'password'=> Hash::make('kanriman'),
+            ],
         ]);
     }
 }
