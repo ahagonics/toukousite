@@ -59,8 +59,8 @@
     <a href="#" class="btn-square-pop">今日投稿の漫画</a>
     <a href="#" class="btn-square-pop">今日投稿の小説</a>
 <br>
-    <a href="#" class="btn-square-pop">漫画ランキング</a>
-    <a href="#" class="btn-square-pop">小説ランキング</a>
+    <a href="{{ route('mangasranking.index') }}" class="btn-square-pop">漫画ランキング</a>
+    <a href="{{ route('novelsranking.index') }}" class="btn-square-pop">小説ランキング</a>
 
 </body>
 </html>
