@@ -33,6 +33,7 @@
     {{-- メニューバー --}}
     <nav>
         <ul>
+          <li><a href="{{ route('Toukousite.index') }}">ホーム</a></li>
           <li><a href="#">漫画</a></li>
           <li><a href="#">小説</a></li>
           <li><a href="#">投稿</a></li>

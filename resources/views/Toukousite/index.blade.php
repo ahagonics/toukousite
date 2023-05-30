@@ -49,6 +49,7 @@
     <h1>投稿サイトへようこそ</h1>
     <nav>
         <ul>
+          <li><a href="#">ホーム</a></li>
           <li><a href="#">漫画</a></li>
           <li><a href="#">小説</a></li>
           <li><a href="#">投稿</a></li>
