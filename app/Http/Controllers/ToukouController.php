@@ -9,6 +9,7 @@ use App\Models\ToukouUser;
 use App\Models\Novels;
 use App\Models\Mangas;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ToukouController extends Controller
 {
@@ -33,10 +34,10 @@ class ToukouController extends Controller
 
         $Genres = Genre::all();
         $Toukouusers = ToukouUser::all();
-        $Users = User::all();
+        $User = User::find(Auth::id());
 
-        //  dd($Genres,$Users);
-        return view('Toukousite.form',compact('Genres','Toukouusers','Users'));
+        // dd($Genres,$User);
+        return view('Toukousite.form',compact('Genres','Toukouusers','User'));
     }
 
     /**

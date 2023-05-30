@@ -33,10 +33,11 @@
     <h1>投稿ページ</h1>
     <nav>
         <ul>
-          <li><a href="#">漫画</a></li>
-          <li><a href="#">小説</a></li>
-          <li><a href="{{ route('Toukousite.create') }}">投稿</a></li>
-          <li><a href="{{ route('login') }}">ログイン</a></li>
+            <li><a href="{{ route('Toukousite.index') }}">ホーム</a></li>
+            <li><a href="{{ route('manga.index') }}">漫画</a></li>
+            <li><a href="{{ route('novel.index') }}">小説</a></li>
+            <li><a href="{{ route('Toukousite.create') }}">投稿</a></li>
+            <li><a href="{{ route('login') }}">ログイン</a></li>
         </ul>
     </nav>
     <br>
@@ -69,13 +70,7 @@
      <br>
      <div>
         <label for="s_users">ユーザー名</label>
-        <select name="s_users">
-            @foreach($Users as $user)
-                <option value="{{ $user->id }}">
-                  {{ $user->name }}
-                </option>
-            @endforeach
-         </select>
+        <span>{{$User->name}}</span>
      </div>
      <br>
      <div>
