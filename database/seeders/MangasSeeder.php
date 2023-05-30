@@ -13,6 +13,6 @@ class MangasSeeder extends Seeder
      */
     public function run(): void
     {
-        Mangas::factory()->count(10)->create();
+        Mangas::factory()->count(100)->create();
     }
 }
