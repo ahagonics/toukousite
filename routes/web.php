@@ -27,7 +27,7 @@ Route::resource('/mangasranking', MangasRankingController::class);
 Route::resource('/novelsranking', NovelsRankingController::class);
 Route::resource('/manga', MangaController::class);
 Route::resource('/novel', NovelController::class);
-  
+
 
 
 

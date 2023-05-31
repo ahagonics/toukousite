@@ -9,4 +9,9 @@ class Novels extends Model
 {
     use HasFactory;
     protected $table ='novels';
+
+    public function user(){
+
+        return $this->belongsTo(User::class, 'toukou_user_id');
+    }
 }

@@ -19,7 +19,7 @@ class MangasFactory extends Factory
         return [
             'name' => fake()->realText(10),
             'genre_id' => fake()->numberBetween(1,3),
-            'toukou_user_id' => fake()->numberBetween(1,10),
+            'toukou_user_id' => fake()->numberBetween(1,3),
             'content' => fake()->realText(50),
             'review' => fake()->numberBetween(1,5),
             'created_at' => fake()->dateTime()

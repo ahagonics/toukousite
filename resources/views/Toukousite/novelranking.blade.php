@@ -43,9 +43,9 @@
     @foreach($novelsrank as $novel_rankdata)
         <div class="card my-4">
             <div class="row mx-0">
-                {{-- <h3 class="col border-bottom text-center border-dark"> {{}} 位</h3> --}}
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_rankdata->name }}  </h3>
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_rankdata->review }}  </h3>
+                <h3 class="col border-bottom text-center border-dark"> タイトル名：{{ $novel_rankdata->name }}  </h3>
+                <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $novel_rankdata->user->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> 評価名：{{ $novel_rankdata->review }}  </h3>
             </div>
         </div>
     @endforeach
