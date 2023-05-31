@@ -18,7 +18,7 @@
         a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: brown;
         margin-right: 35px;
         }
                 nav {
@@ -47,6 +47,8 @@
                 <h3 class="col border-bottom text-center border-dark"> {{ $manga_data->created_at }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> {{ $manga_data->name }} </h3>
             </div>
+            <a href="{{ route('Toukousite.show', ['id'=>$manga_data->id, 'flag'=>1]) }}">本の中身</a>
+            <br>
         </div>
     @endforeach
 

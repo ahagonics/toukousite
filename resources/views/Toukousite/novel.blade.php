@@ -18,7 +18,7 @@
         a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: brown;
         margin-right: 35px;
         }
                 nav {
@@ -48,7 +48,10 @@
                 <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->name }} </h3>
             </div>
         </div>
+        <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
+                <br>
     @endforeach
+    {{-- $id=$novel_data->id, --}}
 
 </body>
 </html>

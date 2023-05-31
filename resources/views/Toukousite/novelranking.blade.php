@@ -18,7 +18,7 @@
         a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: blueviolet;
         margin-right: 35px;
         }
                 nav {
@@ -47,6 +47,8 @@
                 <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $novel_rankdata->user->name }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> 評価名：{{ $novel_rankdata->review }}  </h3>
             </div>
+            <a href="{{ route('Toukousite.show', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">本の中身</a>
+            <br>
         </div>
     @endforeach
 

@@ -56,7 +56,6 @@ class ToukouController extends Controller
 
         $Genres = new Genre;
         $User = User::find(Auth::id());
-        $Toukouusers = new ToukouUser;
         $Novels = new Novels;
         $Mangas = new Mangas;
 
@@ -88,9 +87,28 @@ class ToukouController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id ,$flag)
     {
-        //
+        //$id, $flag
+
+        if($flag == 0){
+
+            $content = Novels::find($id);
+            $genre = Genre::all();
+            $user = User::all();
+
+            return view('Toukousite.showone',compact('content','genre','user'));
+
+        }else{
+
+            $content = Mangas::find($id);
+            $genre = Genre::all();
+            $user = User::all();
+
+            return view('Toukousite.showone',compact('content','genre','user'));
+
+        }
+
     }
 
     /**

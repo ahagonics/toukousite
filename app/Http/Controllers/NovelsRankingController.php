@@ -9,7 +9,9 @@ use App\Models\Novels;
 class NovelsRankingController extends Controller
 {
     public function index(Request $request){
-        $novelsrank=Novels::orderBy('review','desc')->select('id','name','genre_id','toukou_user_id','content','review')->get();
+
+        $novelsrank=Novels::orderBy('review','desc')->select('id','name','genre_id','toukou_user_id','content','review','created_at')->get();
+
         // dd($novelsrank);
         //小説ランキング
         // $novels_ranking = app()->make(NovelsRank::class)->NovelsRanking();

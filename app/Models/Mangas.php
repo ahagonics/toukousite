@@ -15,6 +15,13 @@ class Mangas extends Model
 
         return $this->belongsTo(User::class, 'toukou_user_id');
     }
+
+
+    public function genre(){
+
+        return $this->belongsTo(Genre::class, 'genre_id');
+    }
+
 }
 
 
