@@ -25,10 +25,23 @@
         padding-top: 20px;
         box-sizing: border-box;
         }
+        .box2 {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            font-weight: bold;
+            color: #6091d3;/*文字色*/
+            background: #FFF;
+            border: solid 3px #6091d3;/*線*/
+            border-radius: 10px;/*角の丸み*/
+        }
+        .box2 p {
+            margin: 0;
+            padding: 0;
+        }
 
     </style>
 </head>
-<body>
+<body bgcolor="f5f5dc">
     <h1>漫画ランキング</h1>
     {{-- メニューバー --}}
     <nav>
@@ -41,8 +54,8 @@
         </ul>
     </nav>
     @foreach($mangasrank as $manga_rankdata)
-        <div class="card my-4">
-            <div class="row mx-0">
+        <div class="box2">
+            <div >
                 <h3 class="col border-bottom text-center border-dark"> タイトル名：{{ $manga_rankdata->name }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $manga_rankdata->user->name }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> 評価：{{ $manga_rankdata->review }} </h3>

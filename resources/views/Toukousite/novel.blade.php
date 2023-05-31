@@ -25,10 +25,23 @@
         padding-top: 20px;
         box-sizing: border-box;
         }
+        .box2 {
+            padding: 0.5em 1em;
+            margin: 2em 0;
+            font-weight: bold;
+            color: #6091d3;/*文字色*/
+            background: #FFF;
+            border: solid 3px #6091d3;/*線*/
+            border-radius: 10px;/*角の丸み*/
+        }
+        .box2 p {
+            margin: 0;
+            padding: 0;
+        }
 
     </style>
 </head>
-<body>
+<body bgcolor="#f5f5dc">
     <h1>小説一覧</h1>
     {{-- メニューバー --}}
     <nav>
@@ -41,16 +54,17 @@
         </ul>
     </nav>
     @foreach($novels as $novel_data)
-        <div class="card my-4">
-            <div class="row mx-0">
+        <div class="box2">
+            <div
                 {{-- <h3 class="col border-bottom text-center border-dark"> {{ ? }} 位</h3> --}}
                 <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->created_at }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->name }} </h3>
             </div>
-        </div>
-        <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
+            <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
         <a href="{{ route('Toukousite.edit', ['id'=>$novel_data->id, 'flag'=>0]) }}">編集</a>
-                <br>
+        </div>
+
+
     @endforeach
     {{-- $id=$novel_data->id, --}}
 

@@ -88,6 +88,7 @@
      <div>
         <input type="submit" value="変更する"/>
       </div>
+      <br>
   </form>
   <form action="{{ route('Toukousite.destroy', $content->id, $flag) }}" method="POST">
     @method('delete')
@@ -95,4 +96,7 @@
     <input type="submit" value="削除">
     </form>
 </body>
+<footer class="footer">
+    <p class="copyright">© 2023 Kensyu Inc. All Rights Reserved.</p>
+</footer>
 </html>
