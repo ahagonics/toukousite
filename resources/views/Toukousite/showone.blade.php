@@ -1,10 +1,10 @@
 <h1>本の中身</h1>
-<div>{{ $content->name }}</div>
-<div>{{ $content->genre->name }}</div>
-<div>{{ $content->user->name }}</div>
-<div>{{ $content->content }}</div>
-<div>{{ $content->review }}</div>
-<div>{{ $content->created_at }}</div>
+<div>タイトル名：{{ $content->name }}</div>
+<div>ジャンル：{{ $content->genre->name }}</div>
+<div>作者：{{ $content->user->name }}</div>
+<div>あらすじ：{{ $content->content }}</div>
+<div>評価：{{ $content->review }}</div>
+<div>最新更新日：{{ $content->created_at }}</div>
 
-<a href="{{ route('Toukousite.index') }}">一覧に戻る</a>
+<a href="{{ route('Toukousite.index') }}">ホームに戻る</a>
 {{-- $genre = Genre::all(); --}}

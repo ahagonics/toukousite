@@ -76,7 +76,7 @@ class ToukouController extends Controller
             $Mangas->content = $request->story;
             $Mangas->review = 1;
 
-            $Novels->save(); //保存の後はリダイレクト
+            $Mangas->save(); //保存の後はリダイレクト
 
             return redirect(route('Toukousite.index'));
         }

@@ -2,7 +2,7 @@
 <html lang=“ja”>
 <head>
     <meta charset=“UFT-8”>
-    <title>小説ランキング</title>
+    <title>今日投稿された小説</title>
     <style>
                 nav {
         width: 100%;
@@ -18,7 +18,7 @@
         a {
         display: block;
         text-decoration: none;
-        color: rgb(109, 121, 211);
+        color: rgb(121, 220, 110);
         margin-right: 100px;
         }
                 nav {
@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <h1>小説ランキング</h1>
+    <h1>今日投稿された小説</h1>
     {{-- メニューバー --}}
     <nav>
         <ul>
@@ -40,14 +40,14 @@
           <li><a href="{{ route('login') }}">ログイン</a></li>
         </ul>
     </nav>
-    @foreach($novelsrank as $novel_rankdata)
+    @foreach($todaynovel as $todaynovel_data)
         <div class="card my-4">
             <div class="row mx-0">
-                <h3 class="col border-bottom text-center border-dark"> タイトル名：{{ $novel_rankdata->name }}  </h3>
-                <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $novel_rankdata->user->name }} </h3>
-                <h3 class="col border-bottom text-center border-dark"> 評価：{{ $novel_rankdata->review }}  </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaynovel_data->created_at }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaynovel_data->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaynovel_data->user->name }} </h3>
             </div>
-            <a href="{{ route('Toukousite.show', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">本の中身</a>
+            <a href="{{ route('Toukousite.show', ['id'=>$todaynovel_data->id, 'flag'=>1]) }}">本の中身</a>
             <br>
         </div>
     @endforeach
