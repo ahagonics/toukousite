@@ -47,7 +47,7 @@
                 <h3 class="col border-bottom text-center border-dark"> {{ $todaynovel_data->name }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> {{ $todaynovel_data->user->name }} </h3>
             </div>
-            <a href="{{ route('Toukousite.show', ['id'=>$todaynovel_data->id, 'flag'=>1]) }}">本の中身</a>
+            <a href="{{ route('Toukousite.show', ['id'=>$todaynovel_data->id, 'flag'=>0]) }}">本の中身</a>
             <br>
         </div>
     @endforeach

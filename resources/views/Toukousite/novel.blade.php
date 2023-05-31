@@ -61,7 +61,7 @@
                 <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->name }} </h3>
             </div>
             <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
-        <a href="{{ route('Toukousite.edit', ['id'=>$novel_data->id, 'flag'=>0]) }}">編集</a>
+            <a href="{{ route('Toukousite.edit', ['id'=>$novel_data->id, 'flag'=>0]) }}">編集</a>
         </div>
 
 
