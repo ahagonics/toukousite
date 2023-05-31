@@ -23,7 +23,8 @@ use App\Models\Novels;
 */
 
 Route::get('/Toukosite/{id}/{flag}',[ToukouController::class,'show'])->name('Toukousite.show');
-Route::resource('/Toukousite', ToukouController::class)->except(['create','edit','show']);
+Route::get('/Toukosite/edit/{id}/{flag}',[ToukouController::class,'edit'])->name('Toukousite.edit');
+Route::resource('/Toukousite', ToukouController::class)->except(['create','edit','show','edit']);
 Route::resource('/mangasranking', MangasRankingController::class);
 Route::resource('/novelsranking', NovelsRankingController::class);
 Route::resource('/manga', MangaController::class);
@@ -34,6 +35,7 @@ Route::resource('/novel', NovelController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/Toukou', [ToukouController::class, 'create'])->name('Toukousite.create');
+
 });
 
 Route::get('/', function () {

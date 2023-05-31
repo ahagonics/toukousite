@@ -47,7 +47,9 @@
                 <h3 class="col border-bottom text-center border-dark"> {{ $manga_data->created_at }} </h3>
                 <h3 class="col border-bottom text-center border-dark"> {{ $manga_data->name }} </h3>
             </div>
+            {{-- <a>{{$manga_data->id}}</a> --}}
             <a href="{{ route('Toukousite.show', ['id'=>$manga_data->id, 'flag'=>1]) }}">本の中身</a>
+            <a href="{{ route('Toukousite.edit', ['id'=>$manga_data->id, 'flag'=>1]) }}">編集</a>
             <br>
         </div>
     @endforeach

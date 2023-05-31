@@ -49,6 +49,7 @@
             </div>
         </div>
         <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
+        <a href="{{ route('Toukousite.edit', ['id'=>$novel_data->id, 'flag'=>0]) }}">編集</a>
                 <br>
     @endforeach
     {{-- $id=$novel_data->id, --}}

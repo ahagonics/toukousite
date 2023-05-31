@@ -76,7 +76,7 @@ class ToukouController extends Controller
             $Mangas->content = $request->story;
             $Mangas->review = 1;
 
-            $Novels->save(); //保存の後はリダイレクト
+            $Mangas->save(); //保存の後はリダイレクト
 
             return redirect(route('Toukousite.index'));
         }
@@ -114,9 +114,27 @@ class ToukouController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id, $flag)
     {
         //
+
+        if($flag == 0){
+
+            $content = Novels::find($id);
+            $Genres = Genre::all();
+            $user = User::all();
+
+            return view('Toukousite.edit',compact('content','Genres','user','flag'));
+
+        }else{
+
+            $content = Mangas::find($id);
+            $Genres = Genre::all();
+            $user = User::all();
+
+            return view('Toukousite.edit',compact('content','Genres','user','flag'));
+
+        }
     }
 
     /**
@@ -125,13 +143,59 @@ class ToukouController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $this->validate($request, [
+            /* name 欄を 必須項目、2文字以上、100文字以内で形式判定する */
+            'name' => ['required', 'min:2', 'max:20'],
+            'genre' => ['required'],
+            'story' => ['required','min:10','max:50'],
+                // 'is_visible' => ['required']
+        ]);
+
+
+        $Novels = Novels::find($id);
+        $Mangas = Mangas::find($id);
+        $User = User::find(Auth::id());
+        // dd($request);
+        if($request->t_genre == 0){
+            $Novels->name = $request->name;
+            $Novels->genre_id = $request->genre;
+            $Novels->toukou_user_id = $User->id;
+            $Novels->content = $request->story;
+            $Novels->review = 1;
+
+            $Novels->save(); //保存の後はリダイレクト
+
+            return redirect(route('Toukousite.index'));
+        }else{
+            $Mangas->name = $request->name;
+            $Mangas->genre_id = $request->genre;
+            $Mangas->toukou_user_id = $User->id;
+            $Mangas->content = $request->story;
+            $Mangas->review = 1;
+
+            $Mangas->save(); //保存の後はリダイレクト
+
+            return redirect(route('Toukousite.index'));
+        }
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+
+
+
+            $content = Novels::find($id);
+            $content->delete();
+
+
+            return redirect('Toukousite');
+
+
+
     }
 }

@@ -48,6 +48,7 @@
                 <h3 class="col border-bottom text-center border-dark"> 評価名：{{ $novel_rankdata->review }}  </h3>
             </div>
             <a href="{{ route('Toukousite.show', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">本の中身</a>
+            <a href="{{ route('Toukousite.edit', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">編集</a>
             <br>
         </div>
     @endforeach
