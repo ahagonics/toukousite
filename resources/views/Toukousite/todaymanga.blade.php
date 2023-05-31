@@ -2,7 +2,7 @@
 <html lang=“ja”>
 <head>
     <meta charset=“UFT-8”>
-    <title>小説一覧</title>
+    <title>今日投稿された漫画</title>
     <style>
                 nav {
         width: 100%;
@@ -18,7 +18,7 @@
         a {
         display: block;
         text-decoration: none;
-        color: brown;
+        color: rgb(233, 178, 120);
         margin-right: 100px;
         }
                 nav {
@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <h1>小説一覧</h1>
+    <h1>今日投稿された漫画</h1>
     {{-- メニューバー --}}
     <nav>
         <ul>
@@ -40,19 +40,17 @@
           <li><a href="{{ route('login') }}">ログイン</a></li>
         </ul>
     </nav>
-    @foreach($novels as $novel_data)
+    @foreach($todaymanga as $todaymanga_data)
         <div class="card my-4">
             <div class="row mx-0">
-                {{-- <h3 class="col border-bottom text-center border-dark"> {{ ? }} 位</h3> --}}
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->created_at }} </h3>
-                <h3 class="col border-bottom text-center border-dark"> {{ $novel_data->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaymanga_data->created_at }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaymanga_data->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> {{ $todaymanga_data->user->name }} </h3>
             </div>
+            <a href="{{ route('Toukousite.show', ['id'=>$todaymanga_data->id, 'flag'=>1]) }}">本の中身</a>
+            <br>
         </div>
-        <a href="{{ route('Toukousite.show', ['id'=>$novel_data->id, 'flag'=>0]) }}">本の中身</a>
-        <a href="{{ route('Toukousite.edit', ['id'=>$novel_data->id, 'flag'=>0]) }}">編集</a>
-                <br>
     @endforeach
-    {{-- $id=$novel_data->id, --}}
 
 </body>
 </html>

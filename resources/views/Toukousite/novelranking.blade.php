@@ -18,11 +18,11 @@
         a {
         display: block;
         text-decoration: none;
-        color: blueviolet;
-        margin-right: 35px;
+        color: rgb(109, 121, 211);
+        margin-right: 100px;
         }
                 nav {
-        padding-top: 5px;
+        padding-top: 20px;
         box-sizing: border-box;
         }
 
@@ -45,7 +45,7 @@
             <div class="row mx-0">
                 <h3 class="col border-bottom text-center border-dark"> タイトル名：{{ $novel_rankdata->name }}  </h3>
                 <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $novel_rankdata->user->name }} </h3>
-                <h3 class="col border-bottom text-center border-dark"> 評価名：{{ $novel_rankdata->review }}  </h3>
+                <h3 class="col border-bottom text-center border-dark"> 評価：{{ $novel_rankdata->review }}  </h3>
             </div>
             <a href="{{ route('Toukousite.show', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">本の中身</a>
             <a href="{{ route('Toukousite.edit', ['id'=>$novel_rankdata->id, 'flag'=>0]) }}">編集</a>

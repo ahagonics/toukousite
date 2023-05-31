@@ -19,10 +19,10 @@
         display: block;
         text-decoration: none;
         color: brown;
-        margin-right: 35px;
+        margin-right: 100px;
         }
                 nav {
-        padding-top: 5px;
+        padding-top: 20px;
         box-sizing: border-box;
         }
 

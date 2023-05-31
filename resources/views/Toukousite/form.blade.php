@@ -19,10 +19,11 @@
         display: block;
         text-decoration: none;
         color: white;
-        margin-right: 35px;
+        margin-right: 100px;
+        margin-bottom: 100px;
         }
                 nav {
-        padding-top: 5px;
+        padding-top: 20px;
         box-sizing: border-box;
         }
 
@@ -88,4 +89,7 @@
   </form>
 
 </body>
+<footer class="footer">
+    <p class="copyright">© 2023 Kensyu Inc. All Rights Reserved.</p>
+</footer>
 </html>

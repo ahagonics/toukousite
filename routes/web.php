@@ -7,6 +7,8 @@ use App\Http\Controllers\MangasRankingController;
 use App\Http\Controllers\NovelsRankingController;
 use App\Http\Controllers\MangaController;
 use App\Http\Controllers\NovelController;
+use App\Http\Controllers\TodayMangaController;
+use App\Http\Controllers\TodayNovelController;
 use App\Models\Mangas;
 use App\Models\Novels;
 
@@ -29,6 +31,8 @@ Route::resource('/mangasranking', MangasRankingController::class);
 Route::resource('/novelsranking', NovelsRankingController::class);
 Route::resource('/manga', MangaController::class);
 Route::resource('/novel', NovelController::class);
+Route::resource('/todaymanga', TodayMangaController::class);
+Route::resource('/todaynovel', TodayNovelController::class);
 
 
 
