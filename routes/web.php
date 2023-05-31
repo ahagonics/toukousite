@@ -22,12 +22,13 @@ use App\Models\Novels;
 |
 */
 
-Route::resource('/Toukousite', ToukouController::class)->except(['create']);
+Route::get('/Toukosite/{id}/{flag}',[ToukouController::class,'show'])->name('Toukousite.show');
+Route::resource('/Toukousite', ToukouController::class)->except(['create','edit','show']);
 Route::resource('/mangasranking', MangasRankingController::class);
 Route::resource('/novelsranking', NovelsRankingController::class);
 Route::resource('/manga', MangaController::class);
 Route::resource('/novel', NovelController::class);
-  
+
 
 
 

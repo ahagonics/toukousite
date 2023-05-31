@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('novels', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('genre_id');
-            $table->bigInteger('toukou_user_id');
+            $table->foreignId('genre_id')->constrained('genres');
+            $table->foreignId('toukou_user_id')->constrained('users');
             $table->string('content');
             $table->double('review')->nullable();
             $table->timestamps();
