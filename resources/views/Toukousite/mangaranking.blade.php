@@ -36,8 +36,8 @@
           <li><a href="{{ route('Toukousite.index') }}">ホーム</a></li>
           <li><a href="{{ route('manga.index') }}">漫画</a></li>
           <li><a href="{{ route('novel.index') }}">小説</a></li>
-          <li><a href="#">投稿</a></li>
-          <li><a href="#">ログイン</a></li>
+          <li><a href="{{ route('Toukousite.create') }}">投稿</a></li>
+          <li><a href="{{ route('login') }}">ログイン</a></li>
         </ul>
     </nav>
     @foreach($mangasrank as $manga_rankdata)
