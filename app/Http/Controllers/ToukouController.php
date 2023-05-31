@@ -55,14 +55,14 @@ class ToukouController extends Controller
         ]);
 
         $Genres = new Genre;
-        $Toukouusers = new ToukouUser;
+        $User = User::find(Auth::id());
         $Novels = new Novels;
         $Mangas = new Mangas;
 
         if($request->t_genre == 0){
             $Novels->name = $request->name;
             $Novels->genre_id = $request->genre;
-            $Novels->toukou_user_id = $request->s_users;
+            $Novels->toukou_user_id = $User->id;
             $Novels->content = $request->story;
             $Novels->review = 1;
 
