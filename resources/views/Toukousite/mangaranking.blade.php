@@ -43,9 +43,9 @@
     @foreach($mangasrank as $manga_rankdata)
         <div class="card my-4">
             <div class="row mx-0">
-                {{-- <h3 class="col border-bottom text-center border-dark"> {{ ? }} 位</h3> --}}
-                <h3 class="col border-bottom text-center border-dark"> {{ $manga_rankdata->name }} </h3>
-                <h3 class="col border-bottom text-center border-dark"> {{ $manga_rankdata->review }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> タイトル名：{{ $manga_rankdata->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> 作者名：{{ $manga_rankdata->user->name }} </h3>
+                <h3 class="col border-bottom text-center border-dark"> 評価：{{ $manga_rankdata->review }} </h3>
             </div>
             <a href="{{ route('Toukousite.show', ['id'=>$manga_rankdata->id, 'flag'=>1]) }}">本の中身</a>
             <br>
