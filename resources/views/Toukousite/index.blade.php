@@ -3,6 +3,7 @@
 <head>
     <meta charset=“UFT-8”>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
     <title>投稿サイト</title>
     <style>
         nav {
@@ -21,7 +22,7 @@
             text-decoration: none;
             color: white;
             margin-right: 100px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
         nav {
             padding-top: 20px;
@@ -43,10 +44,13 @@
             border-bottom: solid 2px #fd9535;
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
         }
+        h1{
+            .wf-roundedmplus1c { font-family: "M PLUS Rounded 1c"; }
+        }
     </style>
 </head>
-<body>
-    <h1>投稿サイトへようこそ</h1>
+<body bgcolor="#f5f5dc">
+    <div class="h1">投稿サイトへようこそ</div>
     <nav>
         <ul>
 
@@ -61,7 +65,7 @@
 
     <a href="{{ route('todaymanga.index') }}" class="btn-square-pop">今日投稿の漫画</a>
     <a href="{{ route('todaynovel.index') }}" class="btn-square-pop">今日投稿の小説</a>
-<br>
+    <br>
     <a href="{{ route('mangasranking.index') }}" class="btn-square-pop">漫画ランキング</a>
     <a href="{{ route('novelsranking.index') }}" class="btn-square-pop">小説ランキング</a>
 
